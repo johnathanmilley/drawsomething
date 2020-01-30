@@ -4,7 +4,7 @@
 
 ## Why did I make this?
 
-This app was developed haphazardly in an attempt to learn something about HTML canvas. It ended up being a little project that my kids enjoyed drawing with.
+This app was developed haphazardly in an attempt to learn something about HTML canvas. It ended up being a little project that my kids enjoyed which in turn brought me enough enjoyment to share it. Enjoy!
 
 Features:
 
