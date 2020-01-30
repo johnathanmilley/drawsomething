@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./pixel_styles.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="./imgs/sword.png">
+    <title>draw something | if you want</title>
+</head>
+<body>
+
+    
+
+    <div class="appContainer">
+        
+
+        <div class="pixel_art">
+            <h1 class="app_title">DRAW<br>SOMETHING</h1>
+            <div class="actions">
+                <div class="color_buttons">
+                    <button button-color="black"class="black color_button button_selected"></button>
+                    <button button-color="orange"class="orange color_button"></button>
+                    <button button-color="darkgreen"class="darkgreen color_button"></button>
+                    <button button-color="gray"class="gray color_button"></button>
+                    <button button-color="blue"class="blue color_button"></button>
+                    <button button-color="rgb(2, 196, 2)"class="green color_button"></button>
+                    <button button-color="red"class="red color_button"></button>
+                    <button button-color="pink"class="pink  color_button"></button>
+                    <button button-color="rebeccapurple"class="purple color_button"></button>
+                    <button button-color="yellow"class="yellow color_button"></button>
+                    <button button-color="rgb(111, 79, 32)"class="brown color_button"></button>
+                    <button button-color="white"class="white color_button">WHITE</button>
+                    
+                   
+                </div>
+
+                
+                <div class="custom_colors">
+                    <button button-color=""class="color_button" name='customButton1'><input type="color" name="customColor1" value="#ff0000"></button>
+                    <button button-color=""class="color_button" name='customButton2'><input type="color" name="customColor2" value="#00ff00"></button>
+                    <button button-color=""class="color_button" name='customButton3'><input type="color" name="customColor3" value="#0000ff"></button>
+                </div>
+        
+                <div class="action_buttons">
+                    <button class="gridToggle action_button">grid</button>       
+                    <button class="fillButton action_button">fill</button>
+                    <button class="makeShapeButton action_button">join</button>
+                    <button class="undoButton action_button">undo</button>
+                    <button class="clearCanvas action_button">clear</button>
+                    <a href="" class="downloadPH">
+                        <button class="saveButton action_button download_button">Save</button>
+                    </a>
+                </div>
+            
+            </div>
+            <canvas>
+                <p>if you are seeing this message then you also have my apologies. sorry, your browser does not support HTML canvas. the canvas is moo-cho important to your enjoyment while here. consider switching to another browser, maybe? it's up to you. doesn't matter to me either way. well... maybe that's not true. enjoy your day. john.</p>
+            </canvas>
+
+            <p class="footerText">Source available on <a href="https://www.github.com/ohrus/drawsomething" target="_blank">Github</a></p>
+        </div>
+    
+    </div>
+    <script src="./pixel_art.js"></script>
+</body>
+</html>

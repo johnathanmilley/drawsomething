@@ -1,0 +1,247 @@
+:root {
+    --bg-color: rgba(0, 140, 255, 0.247);
+    --logo-color:  rgb(92, 92, 245);
+    --app-color: rgb(255, 255, 255);
+    --actions-color: rgb(255, 132, 87);
+    --action-btn-height: 2rem;
+    --action-btn-width: 6rem; 
+    --color-btn-size: 4rem; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 10px;
+    background-color: var(--bg-color);
+}
+
+h1 {
+    font-size: 1rem;
+    color: var(--logo-color);
+    font-family: 'Caveat', cursive;
+}
+
+.appContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.pixel_art {
+    background-color: var(--app-color);
+    display: grid;
+    grid-template-columns: minmax(6rem, 1fr) 2fr;
+    grid-gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+canvas {
+    grid-row:2;
+    margin: 0 auto;
+    touch-action: none; /* prevents scrolling on canvas touch... never implemented*/
+}
+
+.actions {
+    grid-row:2;
+    display: grid;
+    align-items: baseline;
+    padding: .5rem;
+}
+
+.color_buttons {
+    margin: 0 0 1.5rem;
+    display: grid;
+    width: 100%;
+    padding: 1em;
+    grid-template-columns: repeat(3, var(--color-btn-size));
+    justify-content: center;
+    grid-gap: 0;
+}
+
+.custom_colors {
+    margin: 0 0 1.5rem;
+    display: grid;
+    width: 100%;
+    padding: 1em;
+    grid-template-columns: repeat(3, var(--color-btn-size));
+    justify-content: center;
+    grid-gap: 0;
+}
+
+.color_button {
+    
+    width: var(--color-btn-size);
+    height: var(--color-btn-size);
+    border: none;
+}
+
+
+.button_selected {
+    border: 10px dashed rgb(107, 107, 107);
+    transition: border 0.2s ease-out;
+}
+
+.action_buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, var(--action-btn-width));
+    column-gap: .5rem;
+    justify-content: center;
+    border: none;
+}
+
+.action_button {
+    text-transform: lowercase;
+    width: var(--action-btn-width);
+    height: var(--action-btn-height);
+    background-color: rgb(92, 92, 245);
+    color:rgb(255, 243, 243);
+    font-size: 1.2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.action_button:hover {
+    background-color: dimgrey;
+    transition: background-color 0.3s ease-out;
+}
+
+.footerText {
+    grid-row: 3;
+    grid-column-start: 2;
+    text-align: end;
+    font-size: 0.7rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.downloadPH {
+    text-decoration: none;
+}
+
+button input {
+    width: 100%;
+    height: 100%;
+}
+
+.orange { background-color: orange; }
+.darkaqua { background-color: rgb(2, 180, 180); }
+.darkgreen { background-color: darkgreen; }
+.gray { background-color: gray; }
+.blue { background-color: blue; }
+.purple { background-color: rebeccapurple; }
+.green { background-color: rgb(2, 196, 2); }
+.red { background-color: red; }
+.pink { background-color: pink; }
+.yellow { background-color: yellow; }
+.brown { background-color: rgb(111, 79, 32); }
+.black { background-color: black; }
+.white { background-color: white; font-family: 'Caveat', cursive; }
+
+@media (max-width: 810px) {
+
+    .pixel_art {
+        padding: 1rem;
+    }
+
+    .appContainer {
+        display: flex;
+        height: 100vh;
+    }
+    
+    canvas {
+        grid-row:2;
+        margin: 0 auto;
+    }
+
+    .color_button {
+        width: calc(var(--color-btn-size) / 1.3);
+        height: calc(var(--color-btn-size) / 1.3);
+    }
+
+    .color_buttons {
+        grid-template-columns: repeat(3, calc(var(--color-btn-size) / 1.3));
+    }    
+
+    .custom_colors {
+        grid-template-columns: repeat(3, calc(var(--color-btn-size) / 1.3));
+    }
+
+    .action_button {
+        width: calc(var(--action-btn-width) / 1.3);
+        height: calc(var(--action-btn-height) / 1.3);
+        font-size: 1rem;
+    }
+    
+    .action_buttons {
+        grid-template-columns: repeat(2, calc(var(--action-btn-width) / 1.3));
+        grid-gap: 0;
+    }
+
+    .footerText {
+        grid-row: 3;
+        grid-column-start: 2;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .appContainer {
+        height: auto;
+    }
+
+    .app_title{
+        order: 1;
+        align-self: flex-start;
+    }
+
+    canvas {
+        order: 2;
+    }
+    .pixel_art{
+        display: flex;
+        flex-direction: column;
+    }
+    .actions {
+        order: 3;
+        justify-items: center;
+    }
+    
+    .color_button {
+        width: calc(var(--color-btn-size) / 1.6);
+        height: calc(var(--color-btn-size) / 1.6);
+    }
+
+    .color_buttons {
+        display: flex;
+        margin: 0;
+    }    
+
+    .custom_colors {
+        margin: 0;
+        display: flex;
+    }
+
+    .action_button {
+        font-size: 1rem;
+    }
+    
+    .action_buttons {
+        margin: 0;
+        display: flex;
+    }   
+
+    .button_selected {
+        border: 5px dashed rgb(107, 107, 107);
+    }
+
+    .footerText {
+        order: 4;
+        align-self: flex-end;
+    }
+}
