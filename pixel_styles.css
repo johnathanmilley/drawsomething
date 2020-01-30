@@ -85,7 +85,7 @@ canvas {
 
 
 .button_selected {
-    border: 10px dashed rgb(107, 107, 107);
+    border: 7px solid white;
     transition: border 0.2s ease-out;
 }
 
@@ -237,7 +237,7 @@ button input {
     }   
 
     .button_selected {
-        border: 5px dashed rgb(107, 107, 107);
+        border: 5px solid white;
     }
 
     .footerText {
